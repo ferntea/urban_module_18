@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вторичная страница 2</title>
+</head>
+<body>
+    <h1>Вторичная страница 2</h1>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'page1' %}">Вторичная страница 1</a></li>
+            <li><a href="{% url 'page2' %}">Вторичная страница 2</a></li>
+        </ul>
+    </nav>
+    <p>Содержимое вторичной страницы 2.</p>
+</body>
+</html>
