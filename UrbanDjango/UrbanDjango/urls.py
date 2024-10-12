@@ -1,8 +1,7 @@
-"""
-URL configuration for UrbanDjango project.
+"""UrbanDjango URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.1/topics/http/urls/
+    https://docs.djangoproject.com/en/4.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -15,11 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from task5.views import sign_up_by_html, sign_up_by_django
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-#    path('task2/', include('task2.urls')),  # task2
-#    path('task3/', include('task3.urls')),  # task3
-    path('', include('task4.urls')),  # task4
+    path('', sign_up_by_html, name='sign_up_by_html'),
+    path('sign_up_by_django/', sign_up_by_django, name='sign_up_by_django'),
 ]
